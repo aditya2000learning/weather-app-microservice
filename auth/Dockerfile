@@ -2,7 +2,7 @@
 FROM golang:alpine AS builder
 RUN apk add git
 WORKDIR /go/src/app
-RUN git clone -b dev https://github.com/aditya2000learning/weather-app-microservice.git
+RUN git clone https://github.com/aditya2000learning/weather-app-microservice.git
 WORKDIR /go/src/app/weather-app-microservice/auth/src/main
 RUN go build -o /go/bin/app -v ./...
 
