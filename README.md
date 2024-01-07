@@ -1,7 +1,6 @@
 # weather-app-microservice
 
-## Steps:
-
+## Steps using Docker Containers:
 
 # db:
 - docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=aditya mysql
@@ -22,3 +21,7 @@
 - cd UI 
 - docker build -t ui:v1.0.0 .
 - docker run -d -p 3000:3000 -e AUTH_HOST=172.17.0.1 -e AUTH_PORT=8080 -e WEATHER_HOST=172.17.0.1 -e WEATHER_PORT=5000 ui:v1.0.0
+
+## Steps using Docker Compose:
+- docker-compose up -d
+
